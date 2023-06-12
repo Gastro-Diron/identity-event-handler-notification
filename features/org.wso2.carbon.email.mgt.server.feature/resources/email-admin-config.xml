@@ -382,9 +382,9 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="accountConfirmationOTP" display="accountConfirmationOTP" locale="en_US" emailContentType="text/html">
+    <configuration type="accountConfirmationEmailOTP" display="accountConfirmationEmailOTP" locale="en_US" emailContentType="text/html">
         <subject>WSO2 - Email OTP for Account Confirmation</subject>
-        <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#f0f0f0">
+        <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
@@ -396,24 +396,26 @@
                 <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Account Confirmation OTP hfnajhfahfbhjbfhfbj jfnfnjb
+                            Account Confirmation
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px 20px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi,
+                            Hi {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
+                            You have created an account with the following user name. <br>
+                            User Name: <b>{{user-name}}</b><br>
                             Please use this One-Time Password <b>{{OTPCode}}</b> to confirm your account.
                         </p>
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
+                    <td style="text-align: left; padding: 30px 50px 50px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thank you,<br/>WSO2 Identity Server Team.
+                            Thanks,<br/>WSO2 Identity Server Team
                         </p>
                     </td>
                 </tr>
